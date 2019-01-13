@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.post('/fileupload',(req,res)=>{
+  console.log('Post image');
   let form=formidable.IncomingForm();
   form.parse(req,(err,fields,files)=>{
     let oldPath=files.filetoupload.path;
