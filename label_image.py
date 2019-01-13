@@ -24,6 +24,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 import numpy as np
 import tensorflow as tf
+import sys
 
 
 def load_graph(model_file):
@@ -81,7 +82,7 @@ if __name__ == "__main__":
 	input_mean = 0
 	input_std = 255
 	model_file = "output_graph.pb"
-	file_name = input()
+	file_name = sys.argv[1];
 	label_file = "output_labels.txt"
 	input_layer = "Placeholder"
 	output_layer = "final_result"
